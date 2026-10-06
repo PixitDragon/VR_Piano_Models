@@ -1,0 +1,32 @@
+How to Bake a Texture:
+
+1 - Make model
+2 - Select Object, click Materials tab (checkered red sphere)
+3 - New Material (may take a while to load)
+4 - Change base color to desired 
+5 - Go to UV Editing tab at top of screen
+6 - "A" key to select all
+7 - "U", then select "Smart UV Project"
+8 - Change Island Margins to 0.1
+9 - Unwrap
+10 - Click Shading tab at top of screen. Zoom in/out if needed to see object
+11 - Can change roughness, etc.
+	- Make sure metallic is 0, otherwise will come out black
+	- Can right click and add different texture modifiers under Texture tab
+	- Can drag different nodes to inputs of the Principled BSDF node to modify
+12 - When done, click the Render tab on right area. Shaped like grey camera back
+13 - Change Render Engine to Cycles
+14 - Open Bake tab below
+15 - Change Bake Type to Diffuse
+16 - Disable Direct and Indirect lighting
+17 - Right click shader node window, under textures tab, add Image Texture with a new, blank, image
+18 - Ensure object is selected in Layout Screen, then return to Shading
+19 - Ensure the new Image Texture box is selected with a white border 
+20 - Click "Bake" under bake tab
+21 - Drag new image output color to input base color in Principled BSDF, detatch al other nodes from input
+22 - Ensure new image is saved (must be saved separately from blend file)
+
+23 - Export as FBX for Unity
+24 - When import to Unity, Drag in FBX and image texture
+	- Image texture SHOULD auto-apply
+
